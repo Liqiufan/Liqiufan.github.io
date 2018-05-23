@@ -15,7 +15,6 @@
 <meta property="og:url" content="https://Liqiufan.github.io/index.html">
 <meta property="og:site_name" content="Li&#39;s Blog">
 <meta property="og:description" content="一个快乐的小码虫">
-<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Li&#39;s Blog">
 <meta name="twitter:description" content="一个快乐的小码虫">
@@ -47,7 +46,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/image/Profile picture.jpg" class="js-avatar">
+			<img src="/img/Profile picture.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Liqiufan</a></h1>
@@ -87,7 +86,7 @@
 		        
 					<a class="zhihu" target="_blank" href="https://zhihu.com/" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="mail" target="_blank" href="mailto:1052174866@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="mail" target="_blank" href="/1052174866@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -105,7 +104,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/image/Profile picture.jpg" class="js-avatar">
+				<img src="/img/Profile picture.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Liqiufan</h1>
@@ -130,7 +129,7 @@
 			        
 						<a class="zhihu" target="_blank" href="https://zhihu.com/" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="mail" target="_blank" href="mailto:1052174866@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="/1052174866@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -158,88 +157,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-设计模式之一--单例模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/15/设计模式之一--单例模式/">设计模式之一--单例模式</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/15/设计模式之一--单例模式/" class="archive-article-date">
-  	<time datetime="2018-05-15T10:12:52.851Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="什么是单例模式"><a href="#什么是单例模式" class="headerlink" title="什么是单例模式"></a>什么是单例模式</h2><p>在开发时，如果要调取另一个<code>public</code>类中的方法时，有两种方法。<br>第一种方法是使用静态方法，用<code>static</code>关键字标记方法让这个方法在程序运行时就存放在内存中，例如<code>public static void Test(){}</code>。<br>第二种方法就是使用单例模式调用，单例模式与静态方法比较像，只不过单例模式可以在方法被用到的时候才将类实例化，在这之前甚至可以将其设为<code>null</code>。<br>显而易见，使用单例模式可以避免在方法或对象没有被用到的时候就在内存中实例化，另外单例模式保证了在同一时间仅仅会存在一个类的实例。<br>单例模式的应用非常广泛，比如说你不可能在你的电脑上同时打开两个任务管理器，如果你可以的话就去把电脑修一下吧。</p>
-<h2 id="单例模式的单线程实现"><a href="#单例模式的单线程实现" class="headerlink" title="单例模式的单线程实现"></a>单例模式的单线程实现</h2><p>假如我们要在单线程中实现类<code>Singleton</code>的单例模式。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Singleton</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2018/05/15/设计模式之一--单例模式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/15/设计模式之一--单例模式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-自动化打包工具BuildAssetbundle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -247,13 +164,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/15/自动化打包工具BuildAssetbundle/">使用批处理自动化打包模型（.fbx）为Assetbundle</a>
+      <a class="article-title" href="/2018/04/25/自动化打包工具BuildAssetbundle/">使用批处理自动化打包模型（.fbx）为Assetbundle</a>
     </h1>
   
 
         
-        <a href="/2018/05/15/自动化打包工具BuildAssetbundle/" class="archive-article-date">
-  	<time datetime="2018-05-15T10:12:52.837Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
+        <a href="/2018/04/25/自动化打包工具BuildAssetbundle/" class="archive-article-date">
+  	<time datetime="2018-04-25T10:35:54.051Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
 </a>
         
       </header>
@@ -262,7 +179,7 @@
       
         <p>前几天由于工作用到就研究了下批处理操作Unity编辑器进行fbx模型的打包工作，网上也没有可参考的文章，在开发的时候饶了不少弯，就记一下。<br>首先看要实现的效果，由于要给基本不懂的Unity编辑器的小白或者美工使用，所以确定了要做的是一个功能封装非常完备的傻瓜式工具。那么这个工具应该有的操作过程是<code>打开批处理文件--&gt;选择模型目录--&gt;选择输出目录--&gt;完成打包</code>。映射到开发部分，还要考虑到使用者是不会进行导入程序包的，所以需要实现的具体功能为<code>创建批处理文件--&gt;后台调用Unity编辑器--&gt;新建Unity项目--&gt;导入程序包--&gt;调用打包函数--&gt;选择模型目录--&gt;选择输出目录--&gt;打包完成--&gt;退出Unity--&gt;退出工具，清理缓存</code>。
         
-          <a class="article-more-a" href="/2018/05/15/自动化打包工具BuildAssetbundle/#more">more >></a>
+          <a class="article-more-a" href="/2018/04/25/自动化打包工具BuildAssetbundle/#more">more >></a>
         
       
 
@@ -290,170 +207,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/15/自动化打包工具BuildAssetbundle/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Unity协程使用单例模式的NullReferenceException问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/15/Unity协程使用单例模式的NullReferenceException问题/">Unity协程使用单例模式的NullReferenceException问题</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/15/Unity协程使用单例模式的NullReferenceException问题/" class="archive-article-date">
-  	<time datetime="2018-05-15T10:12:52.821Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>昨天在使用单例模式是出现了一个错误，在间接调用协程方法的时候Unity报错<code>NullReferenceException</code>,各处检查找不到错误，万般无奈下从网上找到了解答,参考网址：<a href="http://blog.csdn.net/eijnew/article/details/41545561" target="_blank" rel="noopener">http://blog.csdn.net/eijnew/article/details/41545561</a>.<br>使用单利模式直接和间接调用协程是不一样的，这里使用两个类A和B举例测试。
-        
-          <a class="article-more-a" href="/2018/05/15/Unity协程使用单例模式的NullReferenceException问题/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Unity 3D</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/15/Unity协程使用单例模式的NullReferenceException问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C Sharp委托与事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/15/C Sharp委托与事件/">C#委托与事件</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/15/C Sharp委托与事件/" class="archive-article-date">
-  	<time datetime="2018-05-15T10:12:52.806Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="委托"><a href="#委托" class="headerlink" title="委托"></a>委托</h2><h3 id="什么是委托（Delegate）"><a href="#什么是委托（Delegate）" class="headerlink" title="什么是委托（Delegate）"></a>什么是委托（Delegate）</h3><p>委托的意思很直观，比方说A委托B做一件什么什么事。</p>
-<h3 id="实现一个委托"><a href="#实现一个委托" class="headerlink" title="实现一个委托"></a>实现一个委托</h3><p>首先定义一个委托，使用<code>delegate</code>关键字，它的语法是：<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">TestEventHandler</span>(<span class="params"></span>)</span>;</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2018/05/15/C Sharp委托与事件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/15/C Sharp委托与事件/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/04/25/自动化打包工具BuildAssetbundle/">展开全文 >></a>
         </p>
       
 
@@ -490,13 +244,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/15/Array、List和ArrayList/">Array、List和ArrayList</a>
+      <a class="article-title" href="/2018/02/05/Array、List和ArrayList/">Array、List和ArrayList</a>
     </h1>
   
 
         
-        <a href="/2018/05/15/Array、List和ArrayList/" class="archive-article-date">
-  	<time datetime="2018-05-15T10:12:52.791Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
+        <a href="/2018/02/05/Array、List和ArrayList/" class="archive-article-date">
+  	<time datetime="2018-02-05T12:44:55.713Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-05</time>
 </a>
         
       </header>
@@ -506,7 +260,7 @@
         <p>数组Array、泛型List和动态数组ArrayList都是存储一组数据的，但是适用性有所不同，当然也有不同的用法。</p>
 <h2 id="数组Array"><a href="#数组Array" class="headerlink" title="数组Array"></a>数组Array</h2><p>定义时要定义它的长度，不灵活，在进行数据的插入删除操作时比较麻烦,需要用别的数组作为中继，写出方法进行操作，但是它的数据在内存中式连续存储，速度比较快，写代码时操作是最简单的。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//T[] array = new T[Length];       //定义时要加上数组长度和数据类型</span></span><br><span class="line">   <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];              <span class="comment">//定义一个int类型长度为3的Array</span></span><br><span class="line">   a[<span class="number">0</span>] = <span class="number">1</span>;   <span class="comment">//赋值</span></span><br><span class="line">   a[<span class="number">0</span>] = <span class="number">2</span>;   <span class="comment">//修改</span></span><br></pre></td></tr></table></figure></p>
         
-          <a class="article-more-a" href="/2018/05/15/Array、List和ArrayList/#more">more >></a>
+          <a class="article-more-a" href="/2018/02/05/Array、List和ArrayList/#more">more >></a>
         
       
 
@@ -530,7 +284,252 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/15/Array、List和ArrayList/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/05/Array、List和ArrayList/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Unity协程使用单例模式的NullReferenceException问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/29/Unity协程使用单例模式的NullReferenceException问题/">Unity协程使用单例模式的NullReferenceException问题</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/29/Unity协程使用单例模式的NullReferenceException问题/" class="archive-article-date">
+  	<time datetime="2018-01-29T11:51:14.907Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>昨天在使用单例模式是出现了一个错误，在间接调用协程方法的时候Unity报错<code>NullReferenceException</code>,各处检查找不到错误，万般无奈下从网上找到了解答,参考网址：<a href="http://blog.csdn.net/eijnew/article/details/41545561" target="_blank" rel="noopener">http://blog.csdn.net/eijnew/article/details/41545561</a>.<br>使用单利模式直接和间接调用协程是不一样的，这里使用两个类A和B举例测试。
+        
+          <a class="article-more-a" href="/2018/01/29/Unity协程使用单例模式的NullReferenceException问题/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Unity 3D</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/29/Unity协程使用单例模式的NullReferenceException问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C Sharp委托与事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/22/C Sharp委托与事件/">C#委托与事件</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/22/C Sharp委托与事件/" class="archive-article-date">
+  	<time datetime="2018-01-22T12:59:29.386Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="委托"><a href="#委托" class="headerlink" title="委托"></a>委托</h2><h3 id="什么是委托（Delegate）"><a href="#什么是委托（Delegate）" class="headerlink" title="什么是委托（Delegate）"></a>什么是委托（Delegate）</h3><p>委托的意思很直观，比方说A委托B做一件什么什么事。</p>
+<h3 id="实现一个委托"><a href="#实现一个委托" class="headerlink" title="实现一个委托"></a>实现一个委托</h3><p>首先定义一个委托，使用<code>delegate</code>关键字，它的语法是：<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">TestEventHandler</span>(<span class="params"></span>)</span>;</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/01/22/C Sharp委托与事件/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/22/C Sharp委托与事件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-设计模式之一--单例模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/17/设计模式之一--单例模式/">设计模式之一--单例模式</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/17/设计模式之一--单例模式/" class="archive-article-date">
+  	<time datetime="2018-01-17T13:27:34.341Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="什么是单例模式"><a href="#什么是单例模式" class="headerlink" title="什么是单例模式"></a>什么是单例模式</h2><p>在开发时，如果要调取另一个<code>public</code>类中的方法时，有两种方法。<br>第一种方法是使用静态方法，用<code>static</code>关键字标记方法让这个方法在程序运行时就存放在内存中，例如<code>public static void Test(){}</code>。<br>第二种方法就是使用单例模式调用，单例模式与静态方法比较像，只不过单例模式可以在方法被用到的时候才将类实例化，在这之前甚至可以将其设为<code>null</code>。<br>显而易见，使用单例模式可以避免在方法或对象没有被用到的时候就在内存中实例化，另外单例模式保证了在同一时间仅仅会存在一个类的实例。<br>单例模式的应用非常广泛，比如说你不可能在你的电脑上同时打开两个任务管理器，如果你可以的话就去把电脑修一下吧。</p>
+<h2 id="单例模式的单线程实现"><a href="#单例模式的单线程实现" class="headerlink" title="单例模式的单线程实现"></a>单例模式的单线程实现</h2><p>假如我们要在单线程中实现类<code>Singleton</code>的单例模式。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Singleton</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/01/17/设计模式之一--单例模式/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/17/设计模式之一--单例模式/">展开全文 >></a>
         </p>
       
 
