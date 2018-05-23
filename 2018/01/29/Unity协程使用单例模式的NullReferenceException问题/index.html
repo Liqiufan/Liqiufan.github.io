@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Liqiufan.github.io">
-  <title>Array、List和ArrayList | Li&#39;s Blog</title>
+  <title>Unity协程使用单例模式的NullReferenceException问题 | Li&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数组Array、泛型List和动态数组ArrayList都是存储一组数据的，但是适用性有所不同，当然也有不同的用法。 数组Array定义时要定义它的长度，不灵活，在进行数据的插入删除操作时比较麻烦,需要用别的数组作为中继，写出方法进行操作，但是它的数据在内存中式连续存储，速度比较快，写代码时操作是最简单的。1234//T[] array = new T[Length];       //定义时要加">
-<meta name="keywords" content="C#">
+  <meta name="description" content="昨天在使用单例模式是出现了一个错误，在间接调用协程方法的时候Unity报错NullReferenceException,各处检查找不到错误，万般无奈下从网上找到了解答,参考网址：http://blog.csdn.net/eijnew/article/details/41545561.使用单利模式直接和间接调用协程是不一样的，这里使用两个类A和B举例测试。">
+<meta name="keywords" content="C#,Unity 3D,设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Array、List和ArrayList">
-<meta property="og:url" content="https://Liqiufan.github.io/2018/05/15/Array、List和ArrayList/index.html">
+<meta property="og:title" content="Unity协程使用单例模式的NullReferenceException问题">
+<meta property="og:url" content="https://Liqiufan.github.io/2018/01/29/Unity协程使用单例模式的NullReferenceException问题/index.html">
 <meta property="og:site_name" content="Li&#39;s Blog">
-<meta property="og:description" content="数组Array、泛型List和动态数组ArrayList都是存储一组数据的，但是适用性有所不同，当然也有不同的用法。 数组Array定义时要定义它的长度，不灵活，在进行数据的插入删除操作时比较麻烦,需要用别的数组作为中继，写出方法进行操作，但是它的数据在内存中式连续存储，速度比较快，写代码时操作是最简单的。1234//T[] array = new T[Length];       //定义时要加">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-02-05T12:53:24.608Z">
+<meta property="og:description" content="昨天在使用单例模式是出现了一个错误，在间接调用协程方法的时候Unity报错NullReferenceException,各处检查找不到错误，万般无奈下从网上找到了解答,参考网址：http://blog.csdn.net/eijnew/article/details/41545561.使用单利模式直接和间接调用协程是不一样的，这里使用两个类A和B举例测试。">
+<meta property="og:updated_time" content="2018-01-29T11:54:30.733Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Array、List和ArrayList">
-<meta name="twitter:description" content="数组Array、泛型List和动态数组ArrayList都是存储一组数据的，但是适用性有所不同，当然也有不同的用法。 数组Array定义时要定义它的长度，不灵活，在进行数据的插入删除操作时比较麻烦,需要用别的数组作为中继，写出方法进行操作，但是它的数据在内存中式连续存储，速度比较快，写代码时操作是最简单的。1234//T[] array = new T[Length];       //定义时要加">
+<meta name="twitter:title" content="Unity协程使用单例模式的NullReferenceException问题">
+<meta name="twitter:description" content="昨天在使用单例模式是出现了一个错误，在间接调用协程方法的时候Unity报错NullReferenceException,各处检查找不到错误，万般无奈下从网上找到了解答,参考网址：http://blog.csdn.net/eijnew/article/details/41545561.使用单利模式直接和间接调用协程是不一样的，这里使用两个类A和B举例测试。">
   
     <link rel="alternative" href="/atom.xml" title="Li&#39;s Blog" type="application/atom+xml">
   
@@ -48,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/image/Profile picture.jpg" class="js-avatar">
+			<img src="/img/Profile picture.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Liqiufan</a></h1>
@@ -88,7 +87,7 @@
 		        
 					<a class="zhihu" target="_blank" href="https://zhihu.com/" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="mail" target="_blank" href="mailto:1052174866@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="mail" target="_blank" href="/1052174866@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -106,7 +105,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/image/Profile picture.jpg" class="js-avatar">
+				<img src="/img/Profile picture.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Liqiufan</h1>
@@ -131,7 +130,7 @@
 			        
 						<a class="zhihu" target="_blank" href="https://zhihu.com/" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="mail" target="_blank" href="mailto:1052174866@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="/1052174866@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -157,33 +156,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Array、List和ArrayList" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Unity协程使用单例模式的NullReferenceException问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Array、List和ArrayList
+      Unity协程使用单例模式的NullReferenceException问题
     </h1>
   
 
         
-        <a href="/2018/05/15/Array、List和ArrayList/" class="archive-article-date">
-  	<time datetime="2018-05-15T10:12:52.791Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
+        <a href="/2018/01/29/Unity协程使用单例模式的NullReferenceException问题/" class="archive-article-date">
+  	<time datetime="2018-01-29T11:51:14.907Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>数组Array、泛型List和动态数组ArrayList都是存储一组数据的，但是适用性有所不同，当然也有不同的用法。</p>
-<h2 id="数组Array"><a href="#数组Array" class="headerlink" title="数组Array"></a>数组Array</h2><p>定义时要定义它的长度，不灵活，在进行数据的插入删除操作时比较麻烦,需要用别的数组作为中继，写出方法进行操作，但是它的数据在内存中式连续存储，速度比较快，写代码时操作是最简单的。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//T[] array = new T[Length];       //定义时要加上数组长度和数据类型</span></span><br><span class="line">   <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];              <span class="comment">//定义一个int类型长度为3的Array</span></span><br><span class="line">   a[<span class="number">0</span>] = <span class="number">1</span>;   <span class="comment">//赋值</span></span><br><span class="line">   a[<span class="number">0</span>] = <span class="number">2</span>;   <span class="comment">//修改</span></span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h2 id="泛型List"><a href="#泛型List" class="headerlink" title="泛型List"></a>泛型List</h2><p>泛型相对于数组的优点是它可以随意扩充收缩长短，它在定义时不需要指定泛型List的长度，但也需要定义好数据的类型。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//List&lt;T&gt; list = new List&lt;T&gt;();     //定义时不需要定义长度，但要加上数据类型</span></span><br><span class="line">   List&lt;<span class="keyword">int</span>&gt; b = <span class="keyword">new</span> List&lt;<span class="keyword">int</span>&gt;();      <span class="comment">//定义一个int类型的List</span></span><br><span class="line">   b.Add(<span class="number">1</span>);       <span class="comment">//添加</span></span><br><span class="line">   b.Add(<span class="number">2</span>);       <span class="comment">//添加</span></span><br><span class="line">   <span class="comment">//b.Add("abc"); //错误，非同类型数据</span></span><br><span class="line">   b[<span class="number">0</span>] = <span class="number">3</span>;       <span class="comment">//修改</span></span><br><span class="line">   b.Remove(<span class="number">1</span>);    <span class="comment">//按值删除</span></span><br><span class="line">   b.RemoveAt(<span class="number">0</span>);  <span class="comment">//按索引删除</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="动态数组ArrayList"><a href="#动态数组ArrayList" class="headerlink" title="动态数组ArrayList"></a>动态数组ArrayList</h2><p>动态数组不需要定义数组的长度，和List一样也是随意扩充收缩的，它可以存取任意的类型，将所有的数据以Object类型存储在存入时很舒服，但是取出数据使用时就会出现类型不符的错误，所以需要<b>装箱</b>和<b>拆箱</b>操作，虽然在C#中这些操作不需要自己来做，但是进行这些操作时就占用了内存，影响了性能。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ArrayList arrayList = new ArrayList()      //定义时不需要定义长度和类型</span></span><br><span class="line">ArrayList c = <span class="keyword">new</span> ArrayList();               <span class="comment">//定义一个ArrayList</span></span><br><span class="line">c.Add(<span class="number">1</span>);           <span class="comment">//添加int类型数据</span></span><br><span class="line">c.Add(<span class="string">"abc"</span>);       <span class="comment">//添加string类型数据</span></span><br><span class="line">c.Add(<span class="number">0.1</span>f);        <span class="comment">//添加float类型数据</span></span><br><span class="line">c[<span class="number">0</span>] = <span class="string">"abc"</span>;       <span class="comment">//随意修改数据</span></span><br><span class="line">c[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">c.Remove(<span class="number">1</span>);        <span class="comment">//按值删除</span></span><br><span class="line">c.RemoveAt(<span class="number">0</span>);      <span class="comment">//按索引删除</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<p>在我撸代码时，ArrayList基本没用过，一般普通数组和泛型都已经足够用了，不但避免了装箱拆箱的bug隐患，还捎带了考虑内存占用，还能增加代码可读性。拉黑ArrayList是个不错的选择。st是个不错的选择。</p>
+        <hr>
+<p>昨天在使用单例模式是出现了一个错误，在间接调用协程方法的时候Unity报错<code>NullReferenceException</code>,各处检查找不到错误，万般无奈下从网上找到了解答,参考网址：<a href="http://blog.csdn.net/eijnew/article/details/41545561" target="_blank" rel="noopener">http://blog.csdn.net/eijnew/article/details/41545561</a>.<br>使用单利模式直接和间接调用协程是不一样的，这里使用两个类A和B举例测试。<a id="more"></a><br>测试类A：<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">A</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> A instance;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">A</span>(<span class="params"></span>) </span>&#123; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> A Instance</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">get</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (instance == <span class="literal">null</span>)</span><br><span class="line">                instance = <span class="keyword">new</span> A();</span><br><span class="line">            <span class="keyword">return</span> instance;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">FunctionTest</span>(<span class="params"></span>)      <span class="comment">//普通方法</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Debug.Log(<span class="string">"Here is function test."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> IEnumerator <span class="title">CoroutinueTest</span>(<span class="params"></span>)         <span class="comment">//协程方法</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">yield</span> return new <span class="title">WaitForEndOfFrame</span>(<span class="params"></span>)</span>;</span><br><span class="line">        Debug.Log(<span class="string">"Here is coroutinue test."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Test</span>(<span class="params"></span>)          <span class="comment">//间接调用方法</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        FunctionTest();</span><br><span class="line">        StartCoroutine(CoroutinueTest());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>测试类B:<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">B</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        A.Instance.FunctionTest();          <span class="comment">//直接使用单例调用普通方法</span></span><br><span class="line">        StartCoroutine(A.Instance.CoroutinueTest());            <span class="comment">//直接使用单里调用协程方法</span></span><br><span class="line">        A.Instance.Test();          <span class="comment">//间接调用两种方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>输出结果时，就会发现直接使用单例调用协程时，协程方法和普通方法一样运行无误，经过其他方法间接调用时，普通方法也可以运行出结果，但是协程方法就会运行报错<code>NullReferenceException</code>.未将对象引用到实例。<br>根据上面提到的博客的解释，<b>使用new创建实例或该脚本依附的<code>gameObject</code>被销毁了，都会报这种错误，因为<code>MonoBehaviour</code>脚本不能独自存在，必须依附于某个<code>GameObject</code>。</b><br>它的解决办法是在调用这个单例模式时，不再判断类的实例是否存在，转向判断实例所依附的<code>gameobject</code>是否存在，存在就返回实例，不存在就新建一个<code>gameobject</code>并添加类的组件并返回。<br>修改类A的单例模式是实现方式：<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">A</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">A</span>(<span class="params"></span>) </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> A <span class="title">GetA</span>(<span class="params">GameObject instanceObj</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instanceObj == <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> A();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> AComponent = instanceObj.GetComponent&lt;A&gt;();</span><br><span class="line">        <span class="comment">// ??操作符的作用可以理解为如果左边不为`null`就返回左边，为`null`就返回右边。</span></span><br><span class="line">        <span class="keyword">return</span> AComponent ?? instanceObj.AddComponent&lt;A&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这时候通过间接调用协程就不出问题了。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A.GetA(gameObject).Test();</span><br></pre></td></tr></table></figure></p>
+<p>Unity 3D论坛上的问答网址：<a href="https://answers.unity.com/questions/745685/nullreferenceexception-on-startcoroutine.html" target="_blank" rel="noopener">https://answers.unity.com/questions/745685/nullreferenceexception-on-startcoroutine.html</a></p>
 
       
 
@@ -198,6 +196,14 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Unity 3D</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
         		</li>
       		
 		</ul>
@@ -253,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://Liqiufan.github.io/2018/05/15/Array、List和ArrayList/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://Liqiufan.github.io/2018/01/29/Unity协程使用单例模式的NullReferenceException问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,15 +273,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/15/C Sharp委托与事件/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/02/05/Array、List和ArrayList/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          C#委托与事件
+          Array、List和ArrayList
         
       </div>
     </a>
   
+  
+    <a href="/2018/01/22/C Sharp委托与事件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C#委托与事件</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
